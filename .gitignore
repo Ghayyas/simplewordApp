@@ -1,0 +1,5 @@
+wordpressApp/node_modules
+wordpressApp/platforms
+wordpressApp/plugins
+*.png
+*.url

@@ -1,0 +1,32 @@
+<ion-view>
+<link href="css/home.css" rel="stylesheet" type="text/css" />
+<ion-nav-buttons side="right">
+	<button ui-sref="app.search" class="bar-sidemenu bar-button ion-ios-search-strong"></button>
+</ion-nav-buttons>
+<ion-nav-buttons side="secondary">
+	<button ui-sref="app.settings" class="bar-sidemenu bar-button icon-settings"></button>
+</ion-nav-buttons>
+<ion-nav-title class="logo">DAILY NEWS</ion-nav-title>
+<ion-tabs tabs-top class="tabs-news">
+	<ion-tab title="{{'latest' | translate}}">
+		<ion-pane><ion-content class="home-content" ng-controller="LastestCtrl">
+			<div ng-include="'templates/on_tabs/latest.html'"></div>
+		</ion-content></ion-pane>
+	</ion-tab>
+	<ion-tab title="{{'topnew' | translate}}">
+		<ion-pane><ion-content class="home-content" ng-controller="TopnewsCtrl">
+			<div ng-include="'templates/on_tabs/top_news.html'"></div>
+		</ion-content></ion-pane>
+	</ion-tab>
+	<ion-tab title="{{'video' | translate}}">
+		<ion-pane><ion-content class="home-content" ng-controller="VideoCtrl">
+			<div ng-include="'templates/on_tabs/video.html'"></div>
+		</ion-content></ion-pane>
+	</ion-tab>
+	<ion-tab title="{{'trending' | translate}}">
+		<ion-pane><ion-content class="home-content" ng-controller="TrendingCtrl">
+			<div ng-include="'templates/on_tabs/trending.html'"></div>
+		</ion-content>
+	</ion-tab></ion-pane>
+</ion-tabs>
+</ion-view>
